@@ -14,7 +14,228 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      mentor_profiles: {
+        Row: {
+          bio: string | null
+          created_at: string
+          experience_years: number | null
+          expertise_areas: Json | null
+          id: string
+          qualification: string | null
+          rating: number | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          bio?: string | null
+          created_at?: string
+          experience_years?: number | null
+          expertise_areas?: Json | null
+          id?: string
+          qualification?: string | null
+          rating?: number | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          bio?: string | null
+          created_at?: string
+          experience_years?: number | null
+          expertise_areas?: Json | null
+          id?: string
+          qualification?: string | null
+          rating?: number | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      parent_profiles: {
+        Row: {
+          annual_income: number | null
+          child_id: string | null
+          created_at: string
+          education: string | null
+          id: string
+          occupation: string | null
+          savings_amount: number | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          annual_income?: number | null
+          child_id?: string | null
+          created_at?: string
+          education?: string | null
+          id?: string
+          occupation?: string | null
+          savings_amount?: number | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          annual_income?: number | null
+          child_id?: string | null
+          created_at?: string
+          education?: string | null
+          id?: string
+          occupation?: string | null
+          savings_amount?: number | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string | null
+          first_name: string | null
+          id: string
+          last_name: string | null
+          location: string | null
+          phone: string | null
+          role: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          first_name?: string | null
+          id?: string
+          last_name?: string | null
+          location?: string | null
+          phone?: string | null
+          role: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          first_name?: string | null
+          id?: string
+          last_name?: string | null
+          location?: string | null
+          phone?: string | null
+          role?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      recommendations: {
+        Row: {
+          created_at: string
+          criteria_match: Json | null
+          description: string | null
+          id: string
+          relevance_score: number | null
+          student_id: string
+          title: string
+          type: string
+        }
+        Insert: {
+          created_at?: string
+          criteria_match?: Json | null
+          description?: string | null
+          id?: string
+          relevance_score?: number | null
+          student_id: string
+          title: string
+          type: string
+        }
+        Update: {
+          created_at?: string
+          criteria_match?: Json | null
+          description?: string | null
+          id?: string
+          relevance_score?: number | null
+          student_id?: string
+          title?: string
+          type?: string
+        }
+        Relationships: []
+      }
+      roadmaps: {
+        Row: {
+          created_at: string
+          deadlines: Json | null
+          description: string | null
+          id: string
+          milestones: Json | null
+          progress: number | null
+          student_id: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          deadlines?: Json | null
+          description?: string | null
+          id?: string
+          milestones?: Json | null
+          progress?: number | null
+          student_id: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          deadlines?: Json | null
+          description?: string | null
+          id?: string
+          milestones?: Json | null
+          progress?: number | null
+          student_id?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      student_profiles: {
+        Row: {
+          academic_scores: Json | null
+          career_goals: string | null
+          created_at: string
+          entrance_exams: Json | null
+          grade: string | null
+          id: string
+          interests: Json | null
+          skills: Json | null
+          stream: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          academic_scores?: Json | null
+          career_goals?: string | null
+          created_at?: string
+          entrance_exams?: Json | null
+          grade?: string | null
+          id?: string
+          interests?: Json | null
+          skills?: Json | null
+          stream?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          academic_scores?: Json | null
+          career_goals?: string | null
+          created_at?: string
+          entrance_exams?: Json | null
+          grade?: string | null
+          id?: string
+          interests?: Json | null
+          skills?: Json | null
+          stream?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
